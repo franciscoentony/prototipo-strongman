@@ -1,0 +1,122 @@
+#root {
+  width: 100%;
+  text-align: center;
+}
+.fullPage {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+.container {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  /*border: 1px solid brown;*/
+}
+.submenu ul li{
+  height: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding-right: 1rem;
+}
+.submenu ul li a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: end;
+
+}
+.menu-responsivo {
+  transition: all 1s ease;
+}
+.submenu ul li:hover {
+  background-color: var(--color-gray-800);
+}
+.botao-acao .icone-acao{
+  transition: all 0.2s ease;
+}
+.botao-acao:hover .icone-acao {
+  color: white;
+}
+
+.botaoanimado {
+  border-radius: 0.6rem;
+  transition: all 0.3s ease;
+}
+.divBotao:hover .botaoanimado span{
+  display: none;
+}
+.icone-button {
+  display: none;
+}
+.divBotao:hover .botaoanimado .icone-button {
+  display: block;
+}
+.divBotao:hover .botaoanimado {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 4rem;
+}
+.tituloDash a {
+  box-shadow: 2px 16px 38px -1px rgba(0,0,0,0.33);
+-webkit-box-shadow: 2px 16px 38px -1px rgba(0,0,0,0.33);
+-moz-box-shadow: 2px 16px 38px -1px rgba(0,0,0,0.33);
+  transition: all 0.2s ease;
+}
+main {
+  position: relative;
+  display: flex;
+}
+main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/assets/BG.png);
+  background-size: cover;
+  z-index: -1;
+  filter: grayscale() brightness(80%);
+}
+main::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient( transparent, black);
+  opacity: 100%;
+  z-index: -1;
+}
+.botaoproximo {
+  transition: all 0.4s ease;
+}
+.buttonxmark {
+  transition: all 0.3s ease;
+}
+.xmark {
+  color: #969696;
+  transition: all 0.3s ease;
+}
+.buttonxmark:hover .xmark {
+  color: white;
+}
+.circulo{
+    transition: all 0.7s ease;
+}
+
+@media screen and (max-width: 1080px) {
+  header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  header .right{
+    display: none;
+  }
+  nav {
+    display: flex;
+  }
+}
